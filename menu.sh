@@ -36,6 +36,16 @@ function caso4() {
     echo La suma es: $(( x + y )) 
 }
 
+function caso5() {
+    echo "Lunes"
+    echo "Martes"
+    echo "Miercoles"
+    echo "Jueves"
+    echo "Viernes"
+    echo "Sabado"
+    echo "Domingo"
+}
+
 seleccion=0
 
 while (( $seleccion != 6 ))
@@ -44,7 +54,8 @@ echo "-Pulsa 1 para cambiar el nombre de usuario "
 echo "-Pulsa 2 para imprimir el directorio home" 
 echo "-Pulsa 3 para cambiar la fecha"
 echo "-Pulsa 4 para sumar dos valores"
-echo "-Pulsa 5 para salir"
+echo "-Pulsa 5 para imprimir los dias de la semana: "
+echo "-Pulsa 6 para salir"
 read seleccion
 case $seleccion in
     1)
@@ -60,6 +71,9 @@ case $seleccion in
     caso4
     ;;
     5)
+    caso5
+    ;;
+    6)
     seleccion=6
 
 esac
