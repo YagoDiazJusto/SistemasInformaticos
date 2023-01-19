@@ -14,10 +14,10 @@ function caso2() {
     do 
         if [ -d $file ]
         then
-            echo "Es un directorio" $file
+            echo "Es un directorio: " $file
 
         else
-            echo "Es un archivo" $file
+            echo "Es un archivo: " $file
         fi
     done
 }
@@ -37,24 +37,22 @@ function caso4() {
 }
 
 function caso5() {
-    echo "Lunes"
-    echo "Martes"
-    echo "Miercoles"
-    echo "Jueves"
-    echo "Viernes"
-    echo "Sabado"
-    echo "Domingo"
+    read -p "Seleccione el numero de numeros que quiere imprir: " numeros
+    for(( i=1; i<=$numeros; i++ ))
+    do 
+        echo "Numero: " $i
+    done
 }
 
 seleccion=0
 
 while (( $seleccion != 6 ))
 do
-echo "-Pulsa 1 para cambiar el nombre de usuario "
-echo "-Pulsa 2 para imprimir el directorio home" 
-echo "-Pulsa 3 para cambiar la fecha"
-echo "-Pulsa 4 para sumar dos valores"
-echo "-Pulsa 5 para imprimir los dias de la semana: "
+echo "-Pulsa 1 para cambiar el nombre de usuario: "
+echo "-Pulsa 2 para imprimir el directorio home: " 
+echo "-Pulsa 3 para cambiar la fecha: "
+echo "-Pulsa 4 para sumar dos valores: "
+echo "-Pulsa 5 para imprimir una lista de numeros:  "
 echo "-Pulsa 6 para salir"
 read seleccion
 case $seleccion in
@@ -78,5 +76,3 @@ case $seleccion in
 
 esac
 done
-
-
