@@ -73,6 +73,10 @@ case $seleccion in
     ;;
     6)
     seleccion=6
+    ;;
+    *)
+    echo "Funcion no valida "
+    ;;
 
 esac
 done
